@@ -1,5 +1,5 @@
 {
-  "name": "objx",
+  "name": "obj-x",
   "version": "1.0.0",
   "description": "A lightweight module to provide Objects the same methods than Array",
   "main": "utils.js",
