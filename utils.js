@@ -81,6 +81,15 @@ utils.length = object => {
   return Object.entries(object).length;
 };
 
+utils.find = (object, callback) => {
+  for (let itemKey in object) {
+    let currentItem = object[itemKey];
+
+    if (callback(currentItem)) return currentItem;
+  }
+  return null;
+};
+
 utils.findIndex = (object, callback) => {
   let index = null;
 
