@@ -1,8 +1,7 @@
 const utils = {};
 
 /* default array methods */
-
-utils.map = (object, callback) => {
+[].utils.map = (object, callback) => {
   let resultObject = {};
 
   for (let itemKey in object) {
@@ -21,6 +20,16 @@ utils.some = (object, callback) => {
   }
 
   return false;
+};
+
+utils.every = (object, callback) => {
+  for (let itemKey in object) {
+    let currentItem = object[itemKey];
+
+    if (callback(currentItem)) return false;
+  }
+
+  return true;
 };
 
 utils.splice = (object, index, deleteCount, ...itemsToBeAdded) => {
