@@ -1,7 +1,11 @@
 const utils = {};
 
 /* default array methods */
-[].utils.map = (object, callback) => {
+utils.concat = (objectA, objectB) => {
+  return { ...objectA, ...objectB };
+};
+
+utils.map = (object, callback) => {
   let resultObject = {};
 
   for (let itemKey in object) {
@@ -134,4 +138,4 @@ utils.isEqual = (a, b) => {
   return !isSomeDifferent;
 };
 
-export default utils;
+module.exports = utils;
