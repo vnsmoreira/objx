@@ -87,7 +87,10 @@ utils.findIndex = (object, callback) => {
   for (let itemKey in object) {
     let currentItem = object[itemKey];
 
-    if (callback(currentItem)) return (index = itemKey);
+    if (callback(currentItem)) {
+      index = itemKey;
+      return index;
+    }
   }
   return index;
 };
