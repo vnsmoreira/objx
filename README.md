@@ -80,6 +80,29 @@ console.log(result);
 // }
 ````
 
+### Splice
+
+````javascript
+let users = {
+  user1: { name: 'Emma', age: 26 },
+  user2: { name: 'Andrew', age: 14 },
+  user3: { name: 'Tobey', age: 38 },
+};
+let newUser = { user4: { name: 'Holt', age: 25 } };
+
+let result = _.splice(users, 1, 1, newUser);
+//at index 1 delete 1 item and add 'newUser' in the position
+
+console.log(result);
+// {
+//  user1: { name: 'Emma', age: 26 },
+//  user4: { name: 'Holt', age: 25 },
+//  user3: { name: 'Tobey', age: 38 },
+// }
+
+
+````
+
 ### Some
 
 ````javascript
