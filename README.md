@@ -29,6 +29,39 @@ console.log(result);
 
 ````
 
+### Some
+
+````javascript
+let objectA = { a: 20, b: 40, c: 60 };
+let objectB = { a: 2, b: 4, c: 6 };
+const isGreaterThanTen = value => value > 10;
+
+let resultA = _.some(objectA, isGreaterThanTen);
+let resultB = _.some(objectB, isGreaterThanTen);
+
+console.log(resultA);
+console.log(resultB);
+// true;
+// false
+````
+
+### Every
+
+````javascript
+let objectA = { a: 20, b: 40, c: 60 };
+let objectB = { a: 20, b: 20, c: 8 };
+const isGreaterThanTen = value => value > 10;
+
+let resultA = _.every(objectA, isGreaterThanTen);
+let resultB = _.every(objectB, isGreaterThanTen);
+
+console.log(resultA);
+console.log(resultB);
+// true;
+// false
+````
+
+
 ### Concat
 
 ````javascript
@@ -39,7 +72,6 @@ let result = _.concat(objectA, objectB);
 
 console.log(result);
 // { name: 'Amy', age: 25, job: 'police officer' };
-
 ````
 
 
