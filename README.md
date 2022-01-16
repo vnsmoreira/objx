@@ -45,6 +45,41 @@ console.log(result);
 // { item1: 40, item2: 50, item3: 60 };
 ````
 
+### Filter
+
+````javascript
+let users = {
+  user1: { name: 'Emma', age: 16 },
+  user2: { name: 'Andrew', age: 17 },
+  user3: { name: 'Tobey', age: 18 },
+};
+
+let result = _.filter(users, user => user.age >= 18);
+
+console.log(result);
+// { user3: { name: 'Tobey', age: 18 } };
+````
+
+### Sort
+
+````javascript
+let users = {
+  user1: { name: 'Emma', age: 26 },
+  user2: { name: 'Andrew', age: 14 },
+  user3: { name: 'Tobey', age: 38 },
+};
+
+let result = _.sort(users, 'values', (a, b) => a.age > b.age);
+// to order based on the keys: _.sort(users,'keys,(key)=>{})
+
+console.log(result);
+// {
+//  user3: { name: 'Tobey', age: 38 },
+//  user1: { name: 'Emma', age: 26 },
+//  user2: { name: 'Andrew', age: 14 },
+// }
+````
+
 ### Some
 
 ````javascript
