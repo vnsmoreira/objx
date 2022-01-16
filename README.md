@@ -2,13 +2,16 @@
 (*Project currently in development*)
 > 
 > A lightweight module that provides Objects with the main Array methods
-<br>
+
+## Installing
+````
+npm i @vutils/objx
+````
 
 ## Importing
 ````javascript
 import _ from '@vutils/objx'
 ````
-<br>
 
 ## From array methods
 
