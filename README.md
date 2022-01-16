@@ -12,6 +12,24 @@ import _ from '@vutils/objx'
 
 ## From array methods
 
+### ForEach
+
+````javascript
+let products = {
+  item1:{name:'itemOne',amount:20},
+  item2:{name:'itemTwo',amount:25},
+  item3:{name:'itemThree',amount:30}
+};
+
+_.forEach(products, (item, itemKey) => {
+  console.log(item.name, itemKey);
+});
+
+// 'itemOne', 'item1'
+// 'itemTwo', 'item2'
+// 'itemThree', 'item3'
+````
+
 ### Map
 
 ````javascript
@@ -25,8 +43,6 @@ let result = _.map(products, item => item.amount * 2);
 
 console.log(result);
 // { item1: 40, item2: 50, item3: 60 };
-
-
 ````
 
 ### Some
